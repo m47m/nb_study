@@ -19,7 +19,7 @@ fetch('https://api.thecatapi.com/v1/images/search?limit=10&page=1').then(res=>re
 		app.appendChild(img);
 	});
 	// 将序列化后的内容 写入文件
-	//生成html文件
+	// 生成html文件
 	fs.writeFileSync('./ssr_index.html',root.serialize());
 
 	console.log(root.serialize());
