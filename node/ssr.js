@@ -1,9 +1,17 @@
 const { JSDOM } = require("jsdom");
 const fs = require("node:fs");
 
-const root = new JSDOM(`<!DOCTYPE html><html><head></head><body>
-	<div id='app'></div>
-</body></html>`);
+const root = new JSDOM(`
+  <!DOCTYPE html>
+  <html>
+    <head>
+    </head>
+    <body>
+     	<div id='app'>
+     	</div>
+    </body>
+  </html>
+`);
 
 const window = root.window;
 const document = window.document;
