@@ -7,3 +7,4 @@ path.js
 ssr_index.html
 os.js
 process.js
+child_process.js
