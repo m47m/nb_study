@@ -4,11 +4,14 @@
   "description": "",
   "main": "ssr.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "process_dev": "cross-env NODE_ENV=dev node process.js -dev",
+    "process_build": "cross-env NODE_ENV=build node process.js -prod"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "jsdom": "^24.0.0"
   }
 }
