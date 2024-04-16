@@ -61,7 +61,6 @@ console.log("some thing tag")
 
 //execFile 运行文件
 console.log(path.resolve(__dirname, './test.sh'));
-execFile('/Users/xm130812/.nb/study/node/test.sh')
 execFile(path.resolve(__dirname, './test.sh'), null, (err, stdout, stderr) => {
     console.log("🚀 ~ execFile ~ err:", err.toString())
     console.log("🚀 ~ execFile ~ stdout:", stdout.toString())
