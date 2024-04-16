@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // NODE 创建子线程共7个API SYNC 同步
 // 同步，Sync
 // 异步，一般会有一个回调函数
@@ -68,7 +67,4 @@ execFile(path.resolve(__dirname, './test.sh'), null, (err, stdout, stderr) => {
     console.log("🚀 ~ execFile ~ stdout:", stdout.toString())
     console.log("🚀 ~ execFile ~ stderr:", stderr.toString())
 })
-=======
-console.log("test code sometion")
 
->>>>>>> d4c45d5 ([nb] Sync)
