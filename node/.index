@@ -8,3 +8,9 @@ ssr_index.html
 os.js
 process.js
 child_process.js
+events.js
+events.js.html
+ffmpeg.js
+test.js
+test.sh
+util.js
