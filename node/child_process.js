@@ -60,10 +60,39 @@ console.log("npmVersion toString", npmVersion.toString());
 console.log("some thing tag")
 
 //execFile 运行文件
-console.log(path.resolve(__dirname, './test.sh'));
-execFile(path.resolve(__dirname, './test.sh'), null, (err, stdout, stderr) => {
+const shPath = path.resolve(__dirname, './test.sh');
+execFile((shPath), null, (err, stdout, stderr) => {
     console.log("🚀 ~ execFile ~ err:", err.toString())
     console.log("🚀 ~ execFile ~ stdout:", stdout.toString())
     console.log("🚀 ~ execFile ~ stderr:", stderr.toString())
 })
+// 底层实现逻辑
+// exec ->execFile ->spawn
+
+//fork 接受JS模块
+// IPC 通信 基于libuv实现 分别调用不同底层的api
+// (windows named pipe)(posix unix domain socket)
+const testProcess = fork('./test.js');
+
+testProcess.send("i am mian process")
+
+testProcess.on('message',(msg)=>{
+	console.log("main",msg)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
