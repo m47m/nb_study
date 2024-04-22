@@ -60,9 +60,15 @@ fs.rmSync('./mhl', {
 // fs.renameSync('./index.js', 'rename.js')
 
 // 监听文件变化
-fs.watch('./test.sh', (event, filename) => {
-    console.log("🚀 ~ fs.watch ~ event:", event)
-    console.log("🚀 ~ fs.watch ~ filename:", filename)
-})
+// fs.watch('./test.sh', (event, filename) => {
+//     console.log("🚀 ~ fs.watch ~ event:", event)
+//     console.log("🚀 ~ fs.watch ~ filename:", filename)
+// })
 
 console.log('after watch')
+
+// fs 所有的IO操作都是由libuv完成的，完成任务之后才会推入v8的事件队列
+// 计时器都是由V8事件循环完成的
+setImmediate(()=>{
+	console.log("setImmediate")
+})
