@@ -1,4 +1,3 @@
-#!/usr/bin/zsh
 
 echo "start"
 # 函数 检查一个数字是否为素数
