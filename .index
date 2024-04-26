@@ -4,4 +4,5 @@ node
 
 shell
 
-test_cli
+
+TEST_CLI
