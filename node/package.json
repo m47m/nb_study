@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "ssr.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "process_dev": "cross-env NODE_ENV=dev node process.js -dev",
@@ -12,7 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^3.0.2",
     "cross-env": "^7.0.3",
-    "jsdom": "^24.0.0"
+    "ejs": "^3.1.10",
+    "jsdom": "^24.0.0",
+    "marked": "^12.0.2"
   }
 }

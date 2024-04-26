@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/.nb/study/node/markdownToHtml/markdownToHtml.js.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="javascript">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,line_ids,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="gruvbox">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #ebdbb2; background-color: #282828; }
+body { font-family: monospace; color: #ebdbb2; background-color: #282828; }
+* { font-size: 1em; }
+.GruvboxRed { color: #fb4934; }
+.GruvboxFg1 { color: #ebdbb2; }
+.LineNr { color: #7c6f64; }
+.String { color: #b8bb26; font-style: italic; }
+.Comment { color: #928374; font-style: italic; }
+.GruvboxFg3 { color: #bdae93; }
+-->
+</style>
+
+<script>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span><span class="GruvboxRed">import</span> ejs from <span class="String">'ejs'</span>;
+<span id="L2" class="LineNr"> 2 </span><span class="GruvboxRed">import</span> fs from <span class="String">'node:fs'</span>
+<span id="L3" class="LineNr"> 3 </span><span class="GruvboxRed">import</span> <span class="GruvboxFg1">{</span>marked<span class="GruvboxFg1">}</span> from <span class="String">'marked'</span>
+<span id="L4" class="LineNr"> 4 </span>
+<span id="L5" class="LineNr"> 5 </span><span class="GruvboxRed">const</span> init =<span class="GruvboxFg3">()</span>=&gt;<span class="GruvboxFg1">{</span>
+<span id="L6" class="LineNr"> 6 </span>        <span class="GruvboxRed">const</span> md = fs.readFileSync<span class="GruvboxFg3">(</span><span class="String">'README.md'</span>,<span class="String">'utf-8'</span><span class="GruvboxFg3">)</span>;
+<span id="L7" class="LineNr"> 7 </span>        console.log<span class="GruvboxFg3">(</span><span class="String">&quot;md&quot;</span>,md<span class="GruvboxFg3">)</span>;
+<span id="L8" class="LineNr"> 8 </span>        <span class="Comment">// ejs.readFile(</span>
+<span id="L9" class="LineNr"> 9 </span>        <span class="Comment">//      'template.ejs',</span>
+<span id="L10" class="LineNr">10 </span>        <span class="Comment">//      {</span>
+<span id="L11" class="LineNr">11 </span>        <span class="Comment">//</span>
+<span id="L12" class="LineNr">12 </span>        <span class="Comment">//      }</span>
+<span id="L13" class="LineNr">13 </span>        <span class="Comment">// )</span>
+<span id="L14" class="LineNr">14 </span><span class="GruvboxFg1">}</span>
+<span id="L15" class="LineNr">15 </span>
+<span id="L16" class="LineNr">16 </span>init<span class="GruvboxFg3">()</span>;
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
